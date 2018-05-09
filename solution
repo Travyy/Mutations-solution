@@ -1,0 +1,17 @@
+function mutation(arr) {
+  arr = arr.map(function(x)  {
+    return x.toLowerCase().split('');
+  });
+  
+  
+  for (i = 0; i < arr[1].length; ++i)  {
+    var x = arr[0].indexOf(arr[1][i]);
+    if (x == -1)  {
+      return false;
+    }
+  } 
+  
+  return true;
+}
+
+mutation(["zyxwvutsrqponmlkjihgfedcba", "qrstu"]);
